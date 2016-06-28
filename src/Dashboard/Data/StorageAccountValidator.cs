@@ -52,7 +52,8 @@ namespace Dashboard.Data
             if (!IsSecureEndpointProtocol(account.BlobEndpoint) ||
                 !IsSecureEndpointProtocol(account.QueueEndpoint))
             {
-                return false;
+                //For supporting local development with azure storage emulator
+                return true;
             }
 
             return true;
